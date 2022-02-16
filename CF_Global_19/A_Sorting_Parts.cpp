@@ -10,6 +10,22 @@ const ld EPS = 1e-9;
 
 void solve()
 {
+    int n;
+    cin >> n;
+    bool flag = false;
+    ll mx = INT_MIN;
+    for (int i = 0; i < n; i++)
+    {
+        ll x;
+        cin >> x;
+        if (x < mx)
+            flag = true;
+        mx = max(mx, x);
+    }
+    if (flag)
+        cout << "YES\n";
+    else
+        cout << "NO\n";
 }
 
 int main()
@@ -18,7 +34,7 @@ int main()
     cin.tie(0);
     cout.tie(0);
     int tc = 1;
-    // cin >> tc;
+    cin >> tc;
     for (int t = 1; t <= tc; t++)
     {
         // cout << "Case #" << t << ": ";
