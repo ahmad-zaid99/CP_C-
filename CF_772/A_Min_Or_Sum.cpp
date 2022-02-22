@@ -13,10 +13,21 @@ void solve()
     ll n;
     cin >> n;
     ll arr[n];
+    ll o = 0;
     for (ll i = 0; i < n; i++)
     {
         cin >> arr[i];
+        o = o | arr[i];
     }
+    ll res = 0;
+    for (int i = 0; i <= 30; i++)
+    {
+        if (((o >> i) & 1) == 1)
+        {
+            res += 1 << i;
+        }
+    }
+    cout << res << "\n";
 }
 
 int main()
