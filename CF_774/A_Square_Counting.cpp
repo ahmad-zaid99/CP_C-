@@ -8,24 +8,18 @@ const ll MOD = 1e9 + 7;
 const ll INF = 1e9;
 const ld EPS = 1e-9;
 
-void printArr(ll arr[], ll st, ll en)
-{
-    for (ll i = st; i <= en; i++)
-    {
-        cout << arr[i] << " ";
-    }
-    cout << "\n";
-}
-
 void solve()
 {
-    ll n;
-    cin >> n;
-    ll arr[n];
-    for (ll i = 0; i < n; i++)
-    {
-        cin >> arr[i];
-    }
+    ll n, s;
+    cin >> n >> s;
+    // ll arr[n];
+    // for (ll i = 0; i < n; i++)
+    // {
+    //     cin >> arr[i];
+    // }
+    ll res = n * n;
+    res = s / res;
+    cout << res << "\n";
 }
 
 int main()

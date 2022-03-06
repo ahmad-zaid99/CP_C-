@@ -26,6 +26,22 @@ void solve()
     {
         cin >> arr[i];
     }
+    sort(arr, arr + n);
+    int i = 1, j = n - 1;
+    ll s1 = arr[0], s2 = 0;
+    while (i < j)
+    {
+        s1 += arr[i];
+        i++;
+        s2 += arr[j];
+        j--;
+        if (s2 > s1)
+        {
+            cout << "YES\n";
+            return;
+        }
+    }
+    cout << "NO\n";
 }
 
 int main()
